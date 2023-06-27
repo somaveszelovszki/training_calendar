@@ -5,15 +5,18 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TrainingsModule } from './trainings/trainings.module';
 import { TrainingSessionsModule } from './training_sessions/training_sessions.module';
+import { GymsModule } from './gyms/gyms.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true, envFilePath: '.server.env' }),
     MongooseModule.forRoot(process.env.DATABASE_URL, { dbName: 'training_calendar' }),
+    GymsModule,
     TrainingsModule,
-    TrainingSessionsModule
+    TrainingSessionsModule,
+    GymsModule
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService]
 })
 export class AppModule { }

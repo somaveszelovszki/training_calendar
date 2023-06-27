@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
-export type VenueDocument = Venue & Document;
+export type GymDocument = Gym & Document;
 
 @Schema()
 export class Location {
@@ -12,8 +12,8 @@ export class Location {
     description: string;
 }
 
-@Schema({ collection: 'venues' })
-export class Venue {
+@Schema({ collection: 'gyms' })
+export class Gym {
     @Prop()
     name: string;
 
@@ -24,4 +24,4 @@ export class Venue {
     locations: Location[];
 }
 
-export const VenueSchema = SchemaFactory.createForClass(Venue);
+export const GymSchema = SchemaFactory.createForClass(Gym);

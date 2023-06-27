@@ -13,7 +13,7 @@ export class ClientAccount {
     email: string;
 
     @Prop([{ type: MongooseSchema.Types.ObjectId, ref: 'training_sessions' }])
-    venues: TrainingSession[];
+    sessions: TrainingSession[];
 }
 
 export const ClientAccountSchema = SchemaFactory.createForClass(ClientAccount);

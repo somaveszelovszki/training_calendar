@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Schema as MongooseSchema } from 'mongoose';
 import { ProviderAccount } from './provider_account.schema';
-import { Location } from './venue.schema';
+import { Location } from './gym.schema';
 
 export type TrainingDocument = Training & Document;
 
@@ -25,7 +25,7 @@ export class Training {
     @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'provider_accounts' })
     trainer: ProviderAccount;
 
-    @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'venues' })
+    @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'gyms' })
     location: Location;
 
     @Prop()

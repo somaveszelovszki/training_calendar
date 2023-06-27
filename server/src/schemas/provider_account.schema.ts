@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Schema as MongooseSchema } from 'mongoose';
-import { Venue } from './venue.schema';
+import { Gym } from './gym.schema';
 
 export type ProviderAccountDocument = ProviderAccount & Document;
 
@@ -12,8 +12,8 @@ export class ProviderAccount {
     @Prop()
     email: string;
 
-    @Prop([{ type: MongooseSchema.Types.ObjectId, ref: 'venues' }])
-    venues: Venue[];
+    @Prop([{ type: MongooseSchema.Types.ObjectId, ref: 'gyms' }])
+    gyms: Gym[];
 }
 
 export const ProviderAccountSchema = SchemaFactory.createForClass(ProviderAccount);
