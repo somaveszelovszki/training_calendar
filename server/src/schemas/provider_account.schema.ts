@@ -12,7 +12,7 @@ export class ProviderAccount {
     @Prop()
     email: string;
 
-    @Prop([{ type: MongooseSchema.Types.ObjectId, ref: 'gyms' }])
+    @Prop([{ type: MongooseSchema.Types.ObjectId, ref: 'Gym' }])
     gyms: Gym[];
 }
 

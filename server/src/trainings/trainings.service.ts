@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
-import { Training, TrainingDocument } from '../schemas/training.schema';
+import { ProviderAccount } from 'src/schemas/provider_account.schema';
+import { Training, TrainingDocument } from 'src/schemas/training.schema';
 
 @Injectable()
 export class TrainingsService {
@@ -12,6 +13,6 @@ export class TrainingsService {
     }
 
     async getTraining(id: string): Promise<Training> {
-        return await this.trainingModel.findById(id).exec();
+        return await this.trainingModel.findById(id).populate<{ trainer: ProviderAccount }>('trainer').exec();
     }
 }

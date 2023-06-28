@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { TrainingSessionsService } from './training_sessions.service';
 import { TrainingSessionsController } from './training_sessions.controller';
-import { TrainingSession, TrainingSessionSchema } from '../schemas/training_session.schema';
+import { TrainingSession, TrainingSessionSchema } from 'src/schemas/training_session.schema';
 
 @Module({
     imports: [

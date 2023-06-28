@@ -13,8 +13,7 @@ import { GymsModule } from './gyms/gyms.module';
     MongooseModule.forRoot(process.env.DATABASE_URL, { dbName: 'training_calendar' }),
     GymsModule,
     TrainingsModule,
-    TrainingSessionsModule,
-    GymsModule
+    TrainingSessionsModule
   ],
   controllers: [AppController],
   providers: [AppService]

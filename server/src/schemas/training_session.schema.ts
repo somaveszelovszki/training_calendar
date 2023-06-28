@@ -7,13 +7,13 @@ export type TrainingSessionDocument = TrainingSession & Document;
 
 @Schema({ collection: 'training_sessions' })
 export class TrainingSession {
-    @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'trainings' })
+    @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'Training' })
     training: Training;
 
     @Prop()
     date: Date;
 
-    @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'client_accounts' })
+    @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'ClientAccount' })
     participants: ClientAccount[];
 
     @Prop()

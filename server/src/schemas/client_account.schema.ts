@@ -12,7 +12,7 @@ export class ClientAccount {
     @Prop()
     email: string;
 
-    @Prop([{ type: MongooseSchema.Types.ObjectId, ref: 'training_sessions' }])
+    @Prop([{ type: MongooseSchema.Types.ObjectId, ref: 'TrainingSession' }])
     sessions: TrainingSession[];
 }
 

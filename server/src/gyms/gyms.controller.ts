@@ -12,7 +12,6 @@ export class GymsController {
 
     @Get('/:uri')
     async getGym(@Param('uri') uri: string) {
-        console.log(`Getting gym: ${uri}`);
         const gym = await this.gymsService.getGym(uri);
         if (!gym) throw new NotFoundException('Gym does not exist!');
         return gym;

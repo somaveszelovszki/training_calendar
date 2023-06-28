@@ -22,10 +22,10 @@ export class Training {
     @Prop()
     title: string;
 
-    @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'provider_accounts' })
+    @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'ProviderAccount' })
     trainer: ProviderAccount;
 
-    @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'gyms' })
+    @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'Gym' })
     location: Location;
 
     @Prop()

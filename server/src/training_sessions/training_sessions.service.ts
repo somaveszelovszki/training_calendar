@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
-import { TrainingSession, TrainingSessionDocument } from '../schemas/training_session.schema';
+import { TrainingSession, TrainingSessionDocument } from 'src/schemas/training_session.schema';
 
 @Injectable()
 export class TrainingSessionsService {
