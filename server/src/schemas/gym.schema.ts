@@ -24,7 +24,7 @@ export class Gym {
     @Prop()
     locations: Location[];
 
-    @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'Training' })
+    @Prop([{ type: MongooseSchema.Types.ObjectId, ref: 'Training' }])
     trainings: Training[];
 }
 
